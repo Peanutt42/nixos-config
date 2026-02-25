@@ -20,5 +20,6 @@
     stow
     starship
     zed-editor
+    rclone
   ];
 }
