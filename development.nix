@@ -5,6 +5,8 @@
     rustup
     gcc
 
+    python3
+
     # lsp
     nixd
 
