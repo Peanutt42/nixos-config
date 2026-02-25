@@ -9,6 +9,13 @@
 
   outputs = { self, nixpkgs, nixos-hardware, ... }:
   {
+    nixosConfigurations.peter-pc = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      
+      modules = [
+        ./configuration.nix
+      ];
+    };
     nixosConfigurations.peter-laptop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
