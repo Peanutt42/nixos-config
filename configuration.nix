@@ -11,10 +11,6 @@ let
 in
 
 {
-  # nix = {
-  #   extraExperimentalFeatures = [ "nix-command" "flakes" ];
-  # };
-
   imports = 
     [
       ./cachix.nix

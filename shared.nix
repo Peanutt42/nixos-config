@@ -7,14 +7,18 @@
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  imports = [
+    ./apps.nix
+    ./niri.nix
+    ./development.nix
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -33,10 +37,6 @@
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
   };
-
-  # Enable the X11 windowing system.
-  # TODO: switch to wayland
-  services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.desktopManager.gnome.enable = true;
@@ -81,79 +81,14 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       cachix
-      git
-      lazygit
-      neovim
-      kitty
-      gh
-      stow
-      starship
-      zed-editor
-      just
-      thunderbird
     ];
     shell = pkgs.fish;
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  programs.fish.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Niri
-  programs.niri.enable = true;
-  programs.xwayland.enable = true;
-  programs.dms-shell = {
-    enable = true;
-    systemd = {
-      enable = true;             # Systemd service for auto-start
-      restartIfChanged = true;   # Auto-restart dms.service when dms-shell changes
-    };
-    # disabled cuz for some reason it breaks my nixos build process as sqhinx documentation fails :/
-    enableCalendarEvents = false;
-  };
-
   services.flatpak.enable = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-    rustup
-    gcc
-
-    nodejs
-
-    pkg-config
-    openssl.dev
-    glib
-    glib.dev
-    wrapGAppsHook4
-    librsvg
-    webkitgtk_4_1
-    webkitgtk_4_1.dev
-    gtk4
-    gtk4.dev
-    glib
-    glib.dev
-    gdk-pixbuf
-    gdk-pixbuf.dev
-    cairo
-    cairo.dev
-    pango
-    pango.dev
-
-    cargo-tauri
-    sqlx-cli
-    trunk
-
-    zoxide
-    fastfetch
-  ];
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
