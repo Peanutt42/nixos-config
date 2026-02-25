@@ -88,8 +88,8 @@
       gh
       stow
       starship
+      zed-editor
       just
-      zed
       thunderbird
     ];
     shell = pkgs.fish;
