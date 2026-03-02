@@ -9,6 +9,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    appimage-run
+
     thunderbird
     zoxide
     fastfetch
