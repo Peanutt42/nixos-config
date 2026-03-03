@@ -23,5 +23,8 @@
     starship
     zed-editor
     rclone
+
+    htop
+    btop
   ];
 }

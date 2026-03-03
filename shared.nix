@@ -78,7 +78,7 @@
   users.users.peter = {
     isNormalUser = true;
     description = "Peter";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "render" ];
     packages = with pkgs; [
       cachix
     ];
