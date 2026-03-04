@@ -7,6 +7,8 @@
 
     python3
 
+    tmux
+
     # lsp
     nixd
 

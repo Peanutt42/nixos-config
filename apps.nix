@@ -24,6 +24,8 @@
     zed-editor
     rclone
 
+    sioyek
+
     htop
     btop
   ];
