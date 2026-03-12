@@ -4,21 +4,27 @@
   environment.systemPackages = with pkgs; [
     rustup
     gcc
-
+    pkg-config
     python3
+    just
+    nodejs
+ 
+    cargo-tauri
+    sqlx-cli
+    trunk   
+    
+    git
+    lazygit
+    gh
 
-    tmux
-
+    neovim
+    ripgrep
     # lsp
     nixd
 
-    nodejs
+    tmux
 
-    cargo-tauri
-    sqlx-cli
-    trunk
-
-    pkg-config
+    zed-editor
   ];
 
   # forces nix to use fish shell instead of bash when running `nix develop`
