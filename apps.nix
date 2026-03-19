@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     appimage-run
+    unzip
 
     thunderbird
 
