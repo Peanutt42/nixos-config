@@ -14,6 +14,7 @@
       
       modules = [
         ./configuration.nix
+	./pc.nix
       ];
     };
     nixosConfigurations.peter-laptop = nixpkgs.lib.nixosSystem {
@@ -21,6 +22,7 @@
 
       modules = [
         ./configuration.nix
+	./framework-laptop.nix
 
         nixos-hardware.nixosModules.framework-amd-ai-300-series
       ];

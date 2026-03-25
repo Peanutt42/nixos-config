@@ -12,4 +12,5 @@
     # disabled cuz for some reason it breaks my nixos build process as sqhinx docu>
     enableCalendarEvents = false;
   };
+  programs.dsearch.enable = true;
 }

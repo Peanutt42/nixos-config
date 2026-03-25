@@ -1,5 +1,3 @@
 
 # device specifc configurations
 hardware-configuration.nix
-framework-laptop.nix
-pc.nix
