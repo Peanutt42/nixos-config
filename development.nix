@@ -21,6 +21,8 @@
     git
     lazygit
     gh
+    github-desktop
+    gitkraken
 
     neovim
     ripgrep

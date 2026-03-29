@@ -79,7 +79,7 @@
   users.users.peter = {
     isNormalUser = true;
     description = "Peter";
-    extraGroups = [ "networkmanager" "wheel" "video" "render" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "render" "docker" ];
     packages = with pkgs; [
       cachix
     ];
@@ -96,6 +96,8 @@
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
+
+  virtualisation.docker.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

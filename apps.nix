@@ -11,6 +11,25 @@
     unzip
 
     thunderbird
+    zapzap
+    vesktop
+
+    bitwarden-desktop
+    ente-auth
+
+    localsend
+
+    obs-studio
+
+    # proton-vpn ???
+
+    p3x-onenote
+
+    spotify
+
+    libreoffice
+
+    gimp
 
     starship
     zoxide
@@ -25,5 +44,12 @@
 
     htop
     btop
+    mission-center
+
+    winboat
+    freerdp
+
+    podman
+    podman-desktop
   ];
 }
