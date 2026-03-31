@@ -31,6 +31,7 @@
     nixd
 
     # tmux, build our own fork from source
+    tmux-sessionizer
 
     zed-editor
   ];
