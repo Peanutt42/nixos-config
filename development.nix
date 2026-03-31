@@ -26,6 +26,7 @@
 
     neovim
     ripgrep
+    fzf
     # lsp
     nixd
 
