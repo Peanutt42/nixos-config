@@ -25,6 +25,8 @@
 
     p3x-onenote
 
+    anki-bin
+
     spotify
 
     libreoffice
