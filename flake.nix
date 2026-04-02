@@ -27,5 +27,13 @@
         nixos-hardware.nixosModules.framework-amd-ai-300-series
       ];
     };
+    nixosConfigurations.peter-lenovo-laptop = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+
+      modules = [
+        ./configuration.nix
+        ./lenovo-laptop.nix
+      ];
+    };
   };
 }
