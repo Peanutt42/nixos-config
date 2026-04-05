@@ -53,5 +53,11 @@
 
     podman
     podman-desktop
+
+    # cursor
+    bibata-cursors
+
+    # font
+    nerd-fonts.jetbrains-mono
   ];
 }
