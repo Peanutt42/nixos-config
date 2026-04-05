@@ -79,7 +79,7 @@
   users.users.peter = {
     isNormalUser = true;
     description = "Peter";
-    extraGroups = [ "networkmanager" "wheel" "video" "render" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "render" "docker" "greeter" ];
     packages = with pkgs; [
       cachix
     ];
